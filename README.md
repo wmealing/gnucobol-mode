@@ -157,6 +157,14 @@ Q: Can you support X ?
 
 A: I don't have infinite free time, you can always make a feature request, or do it yourself.  
 
+Q: What does it look like ?
+
+A:  Find okay.
+
+![What GNUCOBOL looks like](./images/basic-highlight.png)
+
+
+
 
 
 
