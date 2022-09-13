@@ -1252,8 +1252,6 @@
   (set (make-local-variable 'ac-ignore-case) t)
   )
 
-;; (require 'gnucobol-mode)
-(provide 'gnucobol-mode)
 ;;; gnucobol-mode.el ends here
 
 
