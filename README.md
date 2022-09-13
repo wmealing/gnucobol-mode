@@ -48,9 +48,7 @@ To get a local copy up and running follow these simple example steps.
 
 - The system will need gnucobol, git and emacs installed.  Exactly how this is acheived depends on your operating system and distribution.
 
-  ```sh
-  git clone https://github.com/wmealing/gnucobol-mode.git 
-  ```
+  The authors configuration is Fedora 36, GnuCOBOL 3.1.2.0, Emcas 28.2.  Other versions may work, but this is what is tested.
 
 ### Installation
 
@@ -144,14 +142,20 @@ Your Name - [@wademealing](https://twitter.com/wmealing) -
 
 Project Link: [https://github.com/wmealing/gnucobol-mode](https://github.com/wmealing/gnucobol-mode)
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## FAQ 
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Q: Are you going to put this on melpa  ?
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+A: Not at this time, I'm not sure how commited I am to Cobol as I'm pretty easily distracted.
+
+Q: Does this work with my works cobol implementation ?
+
+A: I dont work with your implementation, I dont know.  I dont know how the other implementations work because it doesnt run on my machine.
+   When that happens, and It doesn't cost me money, then I'll think about it.
+
+Q: Can you support X ?
+A: I don't have infinite free time, you can always make a feature request, or do it yourself.  
+
 
 
 
