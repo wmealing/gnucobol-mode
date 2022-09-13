@@ -138,7 +138,7 @@ Distributed under the GPL License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@wademealing](https://twitter.com/wmealing) -
+Your Name - [@wademealing](https://twitter.com/wmealing) - on twitter.
 
 Project Link: [https://github.com/wmealing/gnucobol-mode](https://github.com/wmealing/gnucobol-mode)
 
