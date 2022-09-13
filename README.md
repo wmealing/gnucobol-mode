@@ -161,7 +161,7 @@ Q: What does it look like ?
 
 A:  Find okay.
 
-![What GNUCOBOL looks like](./images/basic-highlight.png)
+![What GNUCOBOL looks like](https://raw.githubusercontent.com/wmealing/gnucobol-mode/fa9cf87a21eb53bb854e4f8e1ffabf88866917fa/images/basic-highlighting.png)
 
 
 
