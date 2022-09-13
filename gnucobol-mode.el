@@ -1217,6 +1217,23 @@
 	               "C$TOUPPER"
 	               "EXTFH"))
 
+;; generate regex string for each category of keywords
+;; should this be setq ?wierd.
+(setq gnucobol-reserved-words-regexp (regexp-opt reserved-words 'words))
+(setq gnucobol-intrinsict-words-regexp (regexp-opt instrinsic-words 'words))
+(setq gnucobol-mnemonics-words-regexp (regexp-opt mnemonics-words 'words))
+(setq gnucobol-system-words-regexp (regexp-opt system-words 'words))
+
+(setq gnucobol-font-lock-keywords
+      `(
+        (,gnucobol-reserved-words-regexp . font-lock-type-face)
+        (,gnucobol-intrinsict-words-regexp . font-lock-constant-face)
+        (,gnucobol-mnemonics-words-regexp . font-lock-builtin-face)
+        (,gnucobol-system-words-regexp . font-lock-function-name-face)
+        ;; in general, longer words first
+        ))
+
+
 (defvar gnucobol-mode-map
   (let ((map (make-keymap)))
     (define-key map "\C-j" 'newline-and-indent)  map)  "Keymap for GNUCOBOL major mode.")
@@ -1239,6 +1256,9 @@
   ;; basic syntax table.
   (set-syntax-table gnucobol-mode-syntax-table)
 
+  ;; syntax highlighting
+  (setq font-lock-defaults '((gnucobol-font-lock-keywords)))
+
   ;; always display line numbers.
   (setq display-line-numbers t)
 
@@ -1249,8 +1269,7 @@
   (set (make-local-variable 'column-number-mode) t)
 
   ;; Auto complete mode
-  (set (make-local-variable 'ac-ignore-case) t)
-  )
+  (set (make-local-variable 'ac-ignore-case) t))
 
 ;;; gnucobol-mode.el ends here
 
