@@ -96,7 +96,7 @@ new features will become available.
 - [ ] Highlighting
   - [ ] Highlight reserved words.
   - [ ] Mnemonics words.
-  - [ ] system words.
+  - [ ] System words.
 
 - [ ] Indenting
     - [ ] Free mode 
