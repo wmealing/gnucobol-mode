@@ -68,7 +68,7 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
    ```lisp
 	(setq auto-mode-alist
       	(append
-       	        '(("\\.cob\\'" . gnucobol-mode)
+         	'("\\.cob\\'"  . gnucobol-mode)
          	 ("\\.cbl\\'"  . gnucobol-mode)
           	 ("\\.cpy\\'"  . gnucobol-mode)) auto-mode-alist))
 
