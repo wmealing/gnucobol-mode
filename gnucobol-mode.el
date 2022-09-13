@@ -1271,6 +1271,15 @@
   ;; Auto complete mode
   (set (make-local-variable 'ac-ignore-case) t))
 
+
+;; I think we can free up some memory here by killing the list and regex.
+(setq gnucobol-reserved-words-regexp nil)
+(setq gnucobol-intrinsict-words-regexp nil)
+(setq gnucobol-mnemonics-words-regexp nil)
+(setq gnucobol-system-words-regexp nil)
+
+(provide 'gnucobol-mode)
+
 ;;; gnucobol-mode.el ends here
 
 
