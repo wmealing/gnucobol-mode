@@ -159,7 +159,7 @@ A: I don't have infinite free time, you can always make a feature request, or do
 
 Q: What does it look like ?
 
-A:  Find okay.
+A:  Fine okay....
 
 ![What GNUCOBOL looks like](https://raw.githubusercontent.com/wmealing/gnucobol-mode/fa9cf87a21eb53bb854e4f8e1ffabf88866917fa/images/basic-highlighting.png)
 
