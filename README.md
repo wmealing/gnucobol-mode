@@ -94,17 +94,18 @@ new features will become available.
 ## Roadmap
 
 - [ ] Highlighting
-  - [ ] Highlight reserved words.
-  - [ ] Mnemonics words.
-  - [ ] System words.
+  - [x] Highlight reserved words.
+  - [x] Mnemonics words.
+  - [x] System words.
 
-- [ ] Indenting
-    - [ ] Free mode 
-    - [ ] Traditional cobol
+- [ ] Indenting 
+    - [ ] Free mode (still thinking on -what- this should be)
+    - [x] Traditional cobol (started)
 
 - [ ] Cobol ruler zones ?
 - [ ] Flymake support
-- [ ] Skeletons
+- [ ] Skeletons/Yasnippets
+
 - [ ] Your suggestion here.
 
 See the [open issues](https://github.com/wmealing/gnucobol-mode/issues) for a full list of proposed features (and known issues).
