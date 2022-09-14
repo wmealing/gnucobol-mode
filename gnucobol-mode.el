@@ -1328,10 +1328,10 @@
   (set (make-local-variable 'ac-ignore-case) t))
 
 ;; I think we can free up memory here by killing the list and regex.
-(setq gnucobol-reserved-words-regexp nil)
-(setq gnucobol-intrinsict-words-regexp nil)
-(setq gnucobol-mnemonics-words-regexp nil)
-(setq gnucobol-system-words-regexp nil)
+(setq gnucobol-reserved-words nil)
+(setq gnucobol-intrinsict-words nil)
+(setq gnucobol-mnemonics-words nil)
+(setq gnucobol-system-words nil)
 
 (provide 'gnucobol-mode)
 
