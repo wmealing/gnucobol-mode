@@ -99,7 +99,7 @@ new features will become available.
   - [x] System words.
 
 - [ ] Indenting 
-    - [ ] Free mode (still thinking on -what- this should be)
+    - [ ] Free mode (still thinking on -what- this should bey)
     - [x] Traditional cobol (started)
 
 - [ ] Cobol ruler zones ?
@@ -132,9 +132,6 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the GPL License. See `LICENSE` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -151,8 +148,7 @@ A: Not at this time, I'm not sure how commited I am to Cobol as I'm pretty easil
 
 Q: Does this work with my works cobol implementation ?
 
-A: I dont work with your implementation, I dont know.  I dont know how the other implementations work because it doesnt run on my machine.
-   When that happens, and It doesn't cost me money, then I'll think about it.
+A: I dont work with your implementation, I dont know.  I dont know how the other implementations work because it doesnt run on my machine.   When that happens, and It doesn't cost me money, then I'll think about it.
 
 Q: Can you support X ?
 
