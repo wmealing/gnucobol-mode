@@ -1249,12 +1249,68 @@
     (modify-syntax-entry ?\" "\""  st)
     (modify-syntax-entry ?\n ">"   st) st))
 
+(defvar gnucobol-comment
+  (eval-when-compile
+    (regexp-opt '("*" "*>"))))
+
+(defvar gnucobol-divisions
+  (eval-when-compile
+    (regexp-opt '("IDENTIFICATION DIVISION"
+                  "PROGRAM ID"
+                  "ENVIRONMENT DIVISION"
+                  "DATA DIVISION"
+                  "PROCEDURE DIVISION"))))
+
+(defvar gnucobol-sections
+  (eval-when-compile
+    (regexp-opt '("CONFIGURATION SECTION"
+                  "INPUT-OUTPUT SECTION"
+                  "FILE SECTION"
+                  "WORKING-STORAGE SECTION"
+                  "LOCAL-STORAGE SECTION"
+                  "LINKAGE SECTION"
+                  "REPORT SECTION"
+                  "SCREEN SECTION"))))
+
+(defun move-to-eol-before-whitespace ()
+  "Move to the last non-whitespace character in the current line."
+  (interactive)
+  (move-end-of-line nil)
+  (re-search-backward "^\\|[^[:space:]]"))
+
+(defun indent-line-to (indent-offset s)
+  "Indent the line to INDENT-OFFSET characters, replace with S."
+  (progn
+  (interactive "*")
+  (kill-line 0)
+  (indent-to indent-offset)
+  (insert s)))
+
+
+;; this only runs on tab at the moment, should I run it on enter too ?
+(defun gnucobol-indent-command ()
+  "Indent current line as GnuCOBOL code. With argument, indent any additional lines of the same clause rigidly along with this one."
+  (interactive "*")
+  (let* ((st-offset-in-buf (save-excursion (beginning-of-line 1) (point)))
+         (offset-in-line (current-indentation))
+         (sow (+ st-offset-in-buf offset-in-line))
+         (eow (move-to-eol-before-whitespace))
+         (line (thing-at-point 'line t))
+         (s (buffer-substring-no-properties sow eow)))
+    (cond ((string-match-p gnucobol-comment s)    (indent-line-to 7 s))
+          ((string-match-p gnucobol-divisions s)  (indent-line-to 8 s))
+          ((string-match-p gnucobol-sections  s)  (indent-line-to  9 s))
+          (t (indent-line-to 12 s)))))
+
 (define-derived-mode gnucobol-mode prog-mode "GNUCOBOL"
   "COBOL mode is a major mode for handling COBOL files."
   :group 'gnucobol
 
   ;; basic syntax table.
   (set-syntax-table gnucobol-mode-syntax-table)
+
+  ;; indenting
+  (setq-local indent-line-function 'gnucobol-indent-command)
 
   ;; syntax highlighting
   (setq font-lock-defaults '((gnucobol-font-lock-keywords)))
@@ -1271,8 +1327,7 @@
   ;; Auto complete mode
   (set (make-local-variable 'ac-ignore-case) t))
 
-
-;; I think we can free up some memory here by killing the list and regex.
+;; I think we can free up memory here by killing the list and regex.
 (setq gnucobol-reserved-words-regexp nil)
 (setq gnucobol-intrinsict-words-regexp nil)
 (setq gnucobol-mnemonics-words-regexp nil)
