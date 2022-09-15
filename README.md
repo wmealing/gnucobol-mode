@@ -101,7 +101,10 @@ new features will become available.
 - [ ] Indenting 
     - [ ] Free mode (still thinking on -what- this should bey)
     - [x] Traditional cobol (started)
-
+           - [ ] correct indenting for end-thing
+           - [ ] correct indenting for program name.
+           - [ ] write test suite for indenting.
+            
 - [ ] Cobol ruler zones ?
 - [ ] Flymake support
 - [ ] Skeletons/Yasnippets
